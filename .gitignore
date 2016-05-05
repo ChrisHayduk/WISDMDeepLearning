@@ -10,7 +10,7 @@ graph-tmp/
 
 .DS_Store
 pom.xml.releaseBackup
-
+*.class
 dependency-reduced-pom.xml
 *.ser
 application.home_IS_UNDEFINEiD
