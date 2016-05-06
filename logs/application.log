@@ -118,3 +118,95 @@ Objective function automatically set to minimize. Set stepFunction in neural net
                 
 Creating confusion matrix based on classes passed in . Will assume the label distribution passed in is indicative of the overall dataset
 
+2016-05-05 17:08:16,637 - [WARN] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Objective function automatically set to minimize. Set stepFunction in neural net configuration to change default settings.
+
+2016-05-05 17:10:33,332 - [WARN] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Objective function automatically set to minimize. Set stepFunction in neural net configuration to change default settings.
+
+2016-05-05 17:11:36,645 - [WARN] - from org.deeplearning4j.eval.Evaluation in main
+                
+Creating confusion matrix based on classes passed in . Will assume the label distribution passed in is indicative of the overall dataset
+
+2016-05-05 17:14:25,329 - [WARN] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Objective function automatically set to minimize. Set stepFunction in neural net configuration to change default settings.
+
+2016-05-05 17:15:45,613 - [WARN] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Objective function automatically set to minimize. Set stepFunction in neural net configuration to change default settings.
+
+2016-05-05 17:16:47,209 - [WARN] - from org.deeplearning4j.eval.Evaluation in main
+                
+Creating confusion matrix based on classes passed in . Will assume the label distribution passed in is indicative of the overall dataset
+
+2016-05-05 17:19:04,593 - [WARN] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Objective function automatically set to minimize. Set stepFunction in neural net configuration to change default settings.
+
+2016-05-05 17:20:08,429 - [WARN] - from org.deeplearning4j.eval.Evaluation in main
+                
+Creating confusion matrix based on classes passed in . Will assume the label distribution passed in is indicative of the overall dataset
+
+2016-05-05 17:22:37,468 - [WARN] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Objective function automatically set to minimize. Set stepFunction in neural net configuration to change default settings.
+
+2016-05-05 17:23:43,981 - [WARN] - from org.deeplearning4j.eval.Evaluation in main
+                
+Creating confusion matrix based on classes passed in . Will assume the label distribution passed in is indicative of the overall dataset
+
+2016-05-05 17:26:30,302 - [WARN] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Objective function automatically set to minimize. Set stepFunction in neural net configuration to change default settings.
+
+2016-05-05 17:27:32,691 - [WARN] - from org.deeplearning4j.eval.Evaluation in main
+                
+Creating confusion matrix based on classes passed in . Will assume the label distribution passed in is indicative of the overall dataset
+
+2016-05-05 17:36:15,254 - [WARN] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Objective function automatically set to minimize. Set stepFunction in neural net configuration to change default settings.
+
+2016-05-05 17:41:50,054 - [WARN] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Objective function automatically set to minimize. Set stepFunction in neural net configuration to change default settings.
+
+2016-05-05 17:48:03,892 - [WARN] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Objective function automatically set to minimize. Set stepFunction in neural net configuration to change default settings.
+
+2016-05-05 17:48:29,972 - [WARN] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Objective function automatically set to minimize. Set stepFunction in neural net configuration to change default settings.
+
+2016-05-05 17:52:17,796 - [WARN] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Objective function automatically set to minimize. Set stepFunction in neural net configuration to change default settings.
+
+2016-05-05 17:53:00,871 - [WARN] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Objective function automatically set to minimize. Set stepFunction in neural net configuration to change default settings.
+
+2016-05-05 17:54:05,680 - [WARN] - from org.deeplearning4j.eval.Evaluation in main
+                
+Creating confusion matrix based on classes passed in . Will assume the label distribution passed in is indicative of the overall dataset
+
+2016-05-06 18:12:59,764 - [WARN] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Objective function automatically set to minimize. Set stepFunction in neural net configuration to change default settings.
+
+2016-05-06 18:14:09,073 - [WARN] - from org.deeplearning4j.eval.Evaluation in main
+                
+Creating confusion matrix based on classes passed in . Will assume the label distribution passed in is indicative of the overall dataset
+
+2016-05-06 19:07:03,478 - [WARN] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Objective function automatically set to minimize. Set stepFunction in neural net configuration to change default settings.
+
+2016-05-06 19:08:10,977 - [WARN] - from org.deeplearning4j.eval.Evaluation in main
+                
+Creating confusion matrix based on classes passed in . Will assume the label distribution passed in is indicative of the overall dataset
+
