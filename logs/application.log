@@ -246,3 +246,7 @@ Objective function automatically set to minimize. Set stepFunction in neural net
                 
 Objective function automatically set to minimize. Set stepFunction in neural net configuration to change default settings.
 
+2016-05-07 15:58:03,017 - [WARN] - from org.deeplearning4j.eval.Evaluation in main
+                
+Creating confusion matrix based on classes passed in . Will assume the label distribution passed in is indicative of the overall dataset
+
