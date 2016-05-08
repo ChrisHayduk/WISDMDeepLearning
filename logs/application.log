@@ -250,3 +250,67 @@ Objective function automatically set to minimize. Set stepFunction in neural net
                 
 Creating confusion matrix based on classes passed in . Will assume the label distribution passed in is indicative of the overall dataset
 
+2016-05-07 19:15:31,644 - [WARN] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Objective function automatically set to minimize. Set stepFunction in neural net configuration to change default settings.
+
+2016-05-07 19:19:43,982 - [WARN] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Objective function automatically set to minimize. Set stepFunction in neural net configuration to change default settings.
+
+2016-05-07 19:21:23,811 - [WARN] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Objective function automatically set to minimize. Set stepFunction in neural net configuration to change default settings.
+
+2016-05-07 19:24:00,278 - [WARN] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Objective function automatically set to minimize. Set stepFunction in neural net configuration to change default settings.
+
+2016-05-07 19:43:46,149 - [WARN] - from org.deeplearning4j.eval.Evaluation in main
+                
+Creating confusion matrix based on classes passed in . Will assume the label distribution passed in is indicative of the overall dataset
+
+2016-05-07 19:57:27,184 - [WARN] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Objective function automatically set to minimize. Set stepFunction in neural net configuration to change default settings.
+
+2016-05-07 20:00:32,220 - [WARN] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Objective function automatically set to minimize. Set stepFunction in neural net configuration to change default settings.
+
+2016-05-07 20:03:51,421 - [WARN] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Objective function automatically set to minimize. Set stepFunction in neural net configuration to change default settings.
+
+2016-05-07 20:41:15,353 - [WARN] - from org.deeplearning4j.eval.Evaluation in main
+                
+Creating confusion matrix based on classes passed in . Will assume the label distribution passed in is indicative of the overall dataset
+
+2016-05-07 21:03:41,609 - [WARN] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Objective function automatically set to minimize. Set stepFunction in neural net configuration to change default settings.
+
+2016-05-07 21:44:54,952 - [WARN] - from org.deeplearning4j.eval.Evaluation in main
+                
+Creating confusion matrix based on classes passed in . Will assume the label distribution passed in is indicative of the overall dataset
+
+2016-05-07 23:01:10,425 - [WARN] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Objective function automatically set to minimize. Set stepFunction in neural net configuration to change default settings.
+
+2016-05-07 23:25:39,224 - [WARN] - from org.deeplearning4j.eval.Evaluation in main
+                
+Creating confusion matrix based on classes passed in . Will assume the label distribution passed in is indicative of the overall dataset
+
+2016-05-07 23:31:57,645 - [WARN] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Objective function automatically set to minimize. Set stepFunction in neural net configuration to change default settings.
+
+2016-05-08 00:14:18,953 - [WARN] - from org.deeplearning4j.eval.Evaluation in main
+                
+Creating confusion matrix based on classes passed in . Will assume the label distribution passed in is indicative of the overall dataset
+
+2016-05-08 13:53:33,912 - [WARN] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Objective function automatically set to minimize. Set stepFunction in neural net configuration to change default settings.
+

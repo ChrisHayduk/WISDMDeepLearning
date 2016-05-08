@@ -46,11 +46,12 @@ public class WISDMNeuralNet {
     private static int width = 100;
     private static int height = 6;
     private static int numChannels = 1;
-    private static int batchSize = 10;
+    private static int batchSize = 5;
     private static RecordReaderDataSetIterator iter;
     private static ImageRecordReader recordReader;
     private static  String labeledPath = System.getProperty("user.dir")+"/training/";
     private static List<String> labels = new ArrayList<>();
+    private static int nEpochs = 5;
 
     public static void main(String[] args) throws Exception {
         loadData();
@@ -65,22 +66,22 @@ public class WISDMNeuralNet {
                 .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
                 .updater(Updater.NESTEROVS).momentum(0.5)
                 .list(6)
-                .layer(0, new ConvolutionLayer.Builder(5,5)
-                        .nIn(height*width).nOut(20).activation("identity").padding(2,2).stride(1,1).dropOut(0.5).build()
+                .layer(0, new ConvolutionLayer.Builder()
+                        .nIn(numChannels).nOut(20).activation("identity").padding(2,2).stride(1,1).dropOut(0.5).build()
                 )
                 .layer(1,new SubsamplingLayer.Builder(SubsamplingLayer.PoolingType.AVG)
-                        .kernelSize(4,4).stride(1,1).build()
+                        .kernelSize(2,2).stride(1,1).build()
                 )
-                .layer(2, new ConvolutionLayer.Builder(5,5)
-                        .nOut(20).activation("identity").padding(2,2).stride(1,1).dropOut(0.5).build()
+                .layer(2, new ConvolutionLayer.Builder()
+                        .nIn(numChannels).nOut(50).activation("identity").padding(2,2).stride(1,1).dropOut(0.5).build()
                 )
                 .layer(3, new SubsamplingLayer.Builder(SubsamplingLayer.PoolingType.AVG)
                         .kernelSize(2,2).stride(1,1).build()
                 )
-                .layer(4, new DenseLayer.Builder().activation("relu").nOut(120).build())
+                .layer(4, new DenseLayer.Builder().activation("relu").nOut(50).build())
                 .layer(5, new OutputLayer.Builder(LossFunctions.LossFunction.MCXENT).nOut(num_people).activation("softmax").build())
                 .backprop(true).pretrain(false)
-                .inputPreProcessor(0, new FeedForwardToCnnPreProcessor(width,height));
+                .inputPreProcessor(0, new FeedForwardToCnnPreProcessor(height, width, numChannels));
         new ConvolutionLayerSetup(builder,height,width,1);
 
         MultiLayerConfiguration conf = builder.build();
@@ -90,12 +91,33 @@ public class WISDMNeuralNet {
         System.out.println("Training model....");
         int counter = 0;
 
+        for(int i = 0; i < nEpochs; i++){
+            model.fit(iter);
+            System.out.println("\n*** Completed epoch {} ***");
+            System.out.println(i);
+
+            System.out.println("\nEvaluate model...");
+            Evaluation eval = new Evaluation(num_people);
+
+            while(iter.hasNext()){
+                DataSet next = iter.next();
+                INDArray output = model.output(next.getFeatureMatrix(), false);
+                eval.eval(next.getLabels(), output);
+            }
+
+            System.out.println("\n" + eval.stats());
+            iter.reset();
+        }
+
+        System.out.println("******Program finished******");
+        /*
         while(iter.hasNext()){
             counter++;
             DataSet next = iter.next();
             System.out.println(Arrays.toString(next.getFeatureMatrix().shape()));
             System.out.println(Arrays.toString(next.getLabels().shape()));
-            System.out.println("counter: " + counter);
+            System.out.println(next.labelCounts());
+            System.out.println("counter: " + counter + '\n');
             model.fit(next);
         }
         iter.reset();
@@ -104,18 +126,20 @@ public class WISDMNeuralNet {
         //Later, use an actual test set
         System.out.println("Testing model...");
         Evaluation eval = new Evaluation();
+
         while(iter.hasNext()){
             counter++;
             System.out.println("counter: " + counter);
             DataSet next = iter.next();
-            INDArray predict2 = model.output(next.getFeatureMatrix());
-            eval.eval(next.getLabels(), predict2);
+            INDArray output = model.output(next.getFeatureMatrix(), false);
+            eval.eval(next.getLabels(), output);
         }
 
         System.out.println(eval.stats());
-
+*/
 
     }
+
 
     public static void loadData() throws Exception{
     /*    for (File file : new File(labeledPath).listFiles()){
