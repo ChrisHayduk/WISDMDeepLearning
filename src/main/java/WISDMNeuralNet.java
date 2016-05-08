@@ -6,6 +6,7 @@ import org.deeplearning4j.datasets.canova.RecordReaderDataSetIterator;
 import org.deeplearning4j.datasets.fetchers.MnistDataFetcher;
 import org.deeplearning4j.datasets.iterator.DataSetIterator;
 import org.deeplearning4j.datasets.iterator.impl.IrisDataSetIterator;
+import org.deeplearning4j.datasets.iterator.impl.ListDataSetIterator;
 import org.deeplearning4j.datasets.iterator.impl.MnistDataSetIterator;
 import org.deeplearning4j.eval.Evaluation;
 import org.deeplearning4j.nn.api.Layer;
@@ -60,11 +61,11 @@ public class WISDMNeuralNet {
                 .seed(123)
                 .iterations(iterations)
                 .regularization(true).l2(.0005) //Arbitrary
-                .learningRate(0.005)
+                .learningRate(0.001)
                 .weightInit(WeightInit.XAVIER)
                 .gradientNormalization(GradientNormalization.ClipElementWiseAbsoluteValue)
                 .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
-                .updater(Updater.NESTEROVS).momentum(0.5)
+                .updater(Updater.NESTEROVS).momentum(0.9)
                 .list(6)
                 .layer(0, new ConvolutionLayer.Builder()
                         .nIn(numChannels).nOut(20).activation("identity").padding(2,2).stride(1,1).dropOut(0.5).build()
@@ -88,6 +89,7 @@ public class WISDMNeuralNet {
         MultiLayerNetwork model = new MultiLayerNetwork(conf);
         model.init();
         //model.setListeners(new HistogramIterationListener(iterations));
+
         System.out.println("Training model....");
         int counter = 0;
 
